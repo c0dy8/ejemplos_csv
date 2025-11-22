@@ -31,3 +31,38 @@ mostrar_estudiantes()  # Mostrar todos los estudiantes
 
 #####################importante################
 #https://gamma.app/docs/Dominio-de-Archivos-CSV-en-Python-o4sh2p1dssja44u
+
+"""
+CSV
+import csv
+ 
+wiht open ('personas.csv') as f:                                 (lectura)
+    reader = csv.reader(f)
+    for row in reader: 
+    print("Ap paterno: {0}, Ap materno: {1}, Nombre: {2}, Ciudad: {3}".format (row[0], (row[1], (row[2], (row[3],)) 
+
+
+import csv 
+
+personas = [
+            ['palacios', 'Rivas', 'Adan', 'CDMX'],
+            ['palacios', 'Rivas', 'Adan', 'CDMX'],
+            ['palacios', 'Rivas', 'Adan', 'CDMX'],
+
+]
+
+
+
+with open ('personas.csv', 'w', newline='') as file:              (escritura)
+    writer = csv.writer(file,delimiter=';')
+    writer.writerrows(personas)
+
+
+perosnas es el archivo | ponerlos en plurar | cuidado con poner saltos en blanco da error. 
+    
+"""
+
+
+
+
+
