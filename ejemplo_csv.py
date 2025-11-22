@@ -61,8 +61,47 @@ with open ('personas.csv', 'w', newline='') as file:              (escritura)
 perosnas es el archivo | ponerlos en plurar | cuidado con poner saltos en blanco da error. 
     
 """
+"""
+import csv
+
+auth = True
+verify = False
+counter = 1
+autenticado = False
+
+while auth:
+    
+    print("=====Bienvenido a tu sistema de informacion=====")
+    print("Autenticate con tu correo y contraseña para continuar.... \n")
+    email = input("Ingresa correo electronico: ")
+    password = input("Ingresa su contraseña: ")
+
+    with open("login.csv", "r") as archivo:
+        lector = csv.reader(archivo)
+        for fila in lector:
+            if fila[1] == email and fila[2] == password:
+                print(f"Bienvenido {fila[0]}, a su espacio personal")
+                verify = True
+                autenticado = True
+                auth= False
+                break
+            else: verify = False
+        
+    if verify == True:
+        print("\033[94m Excelente has iniciado sesion correctamente \033[0m")
+    else:
+        print(f"\033[93m Usuario o contraseña incorrectos, por favor intenta de nuevo, intento {counter} \033[0m")
+    counter+=1
+    if counter >=4:
+        auth = False
+        print("\033[93m Agotaste tus intentos de inicio de sesion... \033[0m")
+        print("\033[93m hasta luego ....... \033[0m")
+
+while autenticado :
+  print("Bienvenido a tu menu usuario autenticado")
+  break
 
 
-
+"""
 
 
