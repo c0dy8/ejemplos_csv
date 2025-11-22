@@ -25,4 +25,9 @@ def mostrar_estudiantes():
 # Ejemplo de uso
 crear_archivo_csv()  # Crear el archivo CSV inicial
 agregar_estudiante('Pedro', 16, '10')  # Aquí el estudiante que agregues
+
 mostrar_estudiantes()  # Mostrar todos los estudiantes
+
+
+#####################importante################
+#https://gamma.app/docs/Dominio-de-Archivos-CSV-en-Python-o4sh2p1dssja44u
